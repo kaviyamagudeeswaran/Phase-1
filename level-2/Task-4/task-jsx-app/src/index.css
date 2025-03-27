@@ -1,0 +1,41 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+}
+
+.container {
+    text-align: center;
+}
+
+/* New heading color */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+}
+
+/* Greeting box styling */
+.greeting-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.greeting-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}

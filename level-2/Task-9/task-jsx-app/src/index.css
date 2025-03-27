@@ -1,0 +1,56 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+}
+
+.container {
+    text-align: center;
+}
+
+/* New heading color */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+}
+
+/* Input box styling */
+.input-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* Input field */
+.text-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.text-input:focus {
+    border-color: #0056b3;
+}
+
+/* Display text */
+.display-text {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}

@@ -1,0 +1,55 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+}
+
+.container {
+    text-align: center;
+}
+
+/* New heading color */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* User details box styling */
+.user-box {
+    background: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3); /* More depth */
+    width: 70%; /* Increased width */
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+
+.user-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.user-box h2 {
+    font-size: 1.8rem; /* Larger font */
+    font-weight: bold;
+    color: #ff5733; /* Vibrant color */
+}
+
+.user-box p {
+    font-size: 1.2rem; /* Bigger text */
+    margin: 8px 0;
+    color: #333;
+    font-weight: bold;
+}

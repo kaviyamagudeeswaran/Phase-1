@@ -1,0 +1,76 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+}
+
+.container {
+    text-align: center;
+}
+
+/* New heading color */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+}
+
+/* Counter box styling */
+.counter-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+}
+
+/* Count value */
+.count-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Button styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.increment {
+    background: #28a745;
+    color: white;
+}
+
+.increment:hover {
+    background: #218838;
+}
+
+.decrement {
+    background: #dc3545;
+    color: white;
+}
+
+.decrement:hover {
+    background: #c82333;
+}

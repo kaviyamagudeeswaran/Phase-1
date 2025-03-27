@@ -1,0 +1,48 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3); /* Pink Gradient */
+}
+
+.container {
+    text-align: center;
+}
+
+/* New heading color */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+}
+
+/* List box styling */
+.list-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* List styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2rem;
+    padding: 8px;
+    margin: 5px 0;
+    background: #84837c;
+    border-radius: 8px;
+    font-weight: bold;
+}
