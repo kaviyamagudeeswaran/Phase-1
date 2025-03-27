@@ -1,0 +1,25 @@
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Colorful heading using gradient text */
+.colorful-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff5733, #ffbd33, #33ff57, #3383ff, #a833ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}

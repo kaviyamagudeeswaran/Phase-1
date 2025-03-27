@@ -1,0 +1,34 @@
+/* Center the content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Styling for Nested Structure */
+.nested-container {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+}
+
+/* Heading color */
+.nested-container h3 {
+    color: #007bff;  /* Blue */
+}
+
+/* Paragraph text color */
+.nested-container p {
+    color: #28a745;  /* Green */
+}

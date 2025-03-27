@@ -1,0 +1,36 @@
+/* Center the content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Image styling */
+.image-container {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+}
+
+.image-container h3 {
+    color: #007bff; /* Blue heading */
+}
+
+.image-style {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}

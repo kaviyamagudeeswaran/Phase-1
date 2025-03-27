@@ -1,0 +1,38 @@
+/* Center the content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Calculation styling */
+/* Calculation styling */
+.calculation-container {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 70%; /* Increased width */
+    max-width: 800px; /* Set a maximum width */
+    margin: auto;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.calculation-container h3 {
+    color: #007bff; /* Blue heading */
+}
+
+.calculation-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Green */
+}
