@@ -1,0 +1,83 @@
+/* Center the container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Cart Items List */
+.list-group-item {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+}
+
+/* Payment Details Card */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Offers Section */
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #28a745;
+  margin-bottom: 5px;
+}
+
+/* Buttons Styling */
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Primary Button */
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3;
+}
+
+/* Empty Cart Message */
+.text-center p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+}
