@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement - Day of the Week</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Day of the Week Converter</h1>
+    <p>Check the console for output!</p>
+
+    <script>
+        // Define a number representing the day (Change this value to test)
+        let day = 6; 
+
+        // Variable to store the result
+        let dayName;
+
+        // Switch statement to determine the day
+        switch (day) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday - It's the weekend!";
+                break;
+            case 7:
+                dayName = "Sunday - It's the weekend!";
+                break;
+            default:
+                dayName = "Invalid day number! Please enter a number between 1 and 7.";
+        }
+
+        // Print result to console
+        console.log(`Day ${day}: ${dayName}`);
+    </script>
+
+</body>
+</html>

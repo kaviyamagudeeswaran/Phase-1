@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling - Division</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Division with Error Handling</h1>
+    <p>Check the console for output!</p>
+
+    <script>
+        function divideNumbers(a, b) {
+            if (b === 0) {
+                throw new Error("Cannot divide by zero");
+            }
+            return a / b;
+        }
+
+        function testDivision(x, y) {
+            try {
+                let result = divideNumbers(x, y);
+                console.log(`✅ ${x} ÷ ${y} = ${result}`);
+            } catch (error) {
+                console.error(`❌ Error: ${error.message}`);
+            } finally {
+                console.log("➡️ Division operation attempted.\n");
+            }
+        }
+
+        // Test Cases
+        testDivision(10, 2);   // ✅ 10 ÷ 2 = 5
+        testDivision(20, 4);   // ✅ 20 ÷ 4 = 5
+        testDivision(5, 0);    // ❌ Error: Cannot divide by zero
+        testDivision(15, 3);   // ✅ 15 ÷ 3 = 5
+    </script>
+
+</body>
+</html>

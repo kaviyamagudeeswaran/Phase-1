@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher-Order Functions</title>
+</head>
+<body>
+    <h1>Higher-Order Function - operateOnArray</h1>
+    <p>Open the console (F12 -> Console) to see the output.</p>
+    
+    <script>
+        // Higher-order function that applies a given function to each element of an array
+        function operateOnArray(array, operation) {
+            return array.map(operation);
+        }
+
+        // Callback functions
+        function doubleNumber(num) {
+            return num * 2;
+        }
+
+        function squareNumber(num) {
+            return num * num;
+        }
+
+        function numberToString(num) {
+            return num.toString();
+        }
+
+        // Test array
+        const numbers = [1, 2, 3, 4, 5];
+
+        // Using operateOnArray with different callback functions
+        console.log("Original Array:", numbers);
+        console.log("Doubled Array:", operateOnArray(numbers, doubleNumber));
+        console.log("Squared Array:", operateOnArray(numbers, squareNumber));
+        console.log("String Array:", operateOnArray(numbers, numberToString));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic For Loop</title>
+</head>
+<body>
+
+    <h2>Open the Console to See the Loop Output</h2>
+
+    <script>
+        console.log("Even Numbers from 1 to 10:");
+        console.log("----------------------------");
+
+        let sum = 0; // Counter variable to store the sum of even numbers
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) { // Check if the number is even
+                console.log(i);
+                sum += i; // Add even number to sum
+            }
+        }
+
+        console.log("----------------------------");
+        console.log("Sum of Even Numbers: " + sum);
+    </script>
+
+</body>
+</html>

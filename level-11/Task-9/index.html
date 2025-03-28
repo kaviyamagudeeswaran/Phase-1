@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Declarations</title>
+</head>
+<body>
+
+    <h2>Open the Console to See Function Results</h2>
+
+    <script>
+        // Regular function: multiply
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        // Function expression: divide
+        const divide = function(a, b) {
+            return a / b;
+        };
+
+        // Arrow function: power
+        const power = (base, exponent) => base ** exponent;
+
+        // Calling the functions with different arguments
+        console.log("Multiplication (5 * 3): " + multiply(5, 3));  // 15
+        console.log("Multiplication (8 * 2): " + multiply(8, 2));  // 16
+        console.log("----------------------------");
+
+        console.log("Division (10 / 2): " + divide(10, 2));  // 5
+        console.log("Division (20 / 4): " + divide(20, 4));  // 5
+        console.log("----------------------------");
+
+        console.log("Power (2^3): " + power(2, 3));  // 8
+        console.log("Power (5^4): " + power(5, 4));  // 625
+    </script>
+
+</body>
+</html>

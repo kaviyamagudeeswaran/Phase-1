@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Array Processing</title>
+</head>
+<body>
+    <h1>Advanced Array Processing</h1>
+    <p>Open the console (F12 -> Console) to see the output.</p>
+    
+    <script>
+        // Array of student objects
+        const students = [
+            { name: "Kaviya", age: 19, grades: [85, 90, 78] },
+            { name: "Niranjan", age: 20, grades: [88, 76, 95] },
+            { name: "Visalachi", age: 23, grades: [92, 87, 85] },
+            { name: "Dinesh", age: 20, grades: [93, 75, 80] }
+        ];
+        
+        // Using map() to get an array of student names
+        const studentNames = students.map(student => student.name);
+        console.log("Student Names:", studentNames);
+        
+        // Using filter() to find students older than 20
+        const olderStudents = students.filter(student => student.age > 20);
+        console.log("Students Older than 19:", olderStudents);
+        
+        // Using reduce() to calculate the average grade of all students
+        const totalGrades = students.flatMap(student => student.grades);
+        const averageGrade = totalGrades.reduce((sum, grade) => sum + grade, 0) / totalGrades.length;
+        console.log("Average Grade of All Students:", averageGrade.toFixed(2));
+        
+        // Chaining methods to find the average grade of students older than 20
+        const avgGradeOlderStudents = olderStudents.flatMap(student => student.grades)
+            .reduce((sum, grade, _, array) => sum + grade / array.length, 0);
+        console.log("Average Grade of Students Older than 20:", avgGradeOlderStudents.toFixed(2));
+    </script>
+</body>
+</html>

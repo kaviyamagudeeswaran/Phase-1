@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+    <script>
+        // Step 1: Create an object with product properties
+        const product = {
+            name: "Headphones",
+            price: 150,
+            category: "Electronics",
+            inStock: true
+        };
+
+        // Step 2: Destructure object properties into variables
+        const { name, price, category, inStock } = product;
+
+        // Step 3: Print destructured values
+        console.log("Product Name:", name);
+        console.log("Price:  ₹", price);
+        console.log("Category:", category);
+        console.log("In Stock:", inStock);
+
+        // Step 4: Create a function using destructuring in parameters
+        function getProductDetails({ name, price, category, inStock }) {
+            return `Product: ${name}\nCategory: ${category}\nPrice: $${price}\nAvailable: ${inStock ? "Yes" : "No"}`;
+        }
+
+        // Step 5: Call the function and print the result
+        const productDetails = getProductDetails(product);
+        console.log("\nFormatted Product Details:\n", productDetails);
+    </script>
+</head>
+<body>
+    <h2>Check the console for object destructuring output</h2>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type Exploration</title>
+</head>
+<body>
+
+    <h2>Open Console to See the Output</h2>
+
+    <script>
+        // Declaring variables of different data types
+        var myString = "Hello, JavaScript!";  // String
+        let myNumber = 22;                    // Number
+        const myBoolean = true;                // Boolean
+        let myNull = null;                     // Null
+        let myUndefined;                       // Undefined
+        let myObject = { name: "Kaviya", age: 19 }; // Object
+
+        // Using typeof to check the type of each variable
+        console.log("Data Type Exploration:");
+        console.log("----------------------");
+        console.log("Type of myString:", typeof myString);       // string
+        console.log("Type of myNumber:", typeof myNumber);       // number
+        console.log("Type of myBoolean:", typeof myBoolean);     // boolean
+        console.log("Type of myNull:", typeof myNull);           // object (special case in JavaScript)
+        console.log("Type of myUndefined:", typeof myUndefined); // undefined
+        console.log("Type of myObject:", typeof myObject);       // object
+
+        // Converting a string to a number using parseInt()
+        let strNumber = "22";
+        let convertedNumber = parseInt(strNumber);
+
+        console.log("\nString to Number Conversion:");
+        console.log("----------------------------");
+        console.log("Original String:", strNumber);
+        console.log("Converted to Number using parseInt():", convertedNumber);
+        console.log("Type after conversion:", typeof convertedNumber);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+<body>
+
+    <h2>Open the Console to View String Manipulation Outputs</h2>
+
+    <script>
+        // Creating a string variable with full name
+        var fullName = "Kaviya Magudeeswaran";
+
+        // String operations
+        var upperCaseName = fullName.toUpperCase();
+        var nameLength = fullName.length;
+        var firstName = fullName.split(" ")[0]; // Extract first name
+
+        // Creating another string with hometown
+        var hometown = "Dindigul";
+
+        // Concatenation of full name and hometown
+        var fullDetails = fullName + " is from " + hometown + ".";
+
+        // Printing results to the console
+        console.log("String Manipulation:");
+        console.log("----------------------------");
+        console.log("Full Name:", fullName);
+        console.log("Uppercase Name:", upperCaseName);
+        console.log("Name Length:", nameLength);
+        console.log("First Name:", firstName);
+
+        console.log("\nConcatenation:");
+        console.log("----------------");
+        console.log("Full Details:", fullDetails);
+    </script>
+
+</body>
+</html>

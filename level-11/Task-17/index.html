@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator Example</title>
+</head>
+<body>
+    <h1>Spread Operator Example</h1>
+    <p>Open the console (F12 -> Console) to see the output.</p>
+    
+    <script>
+        // Using the spread operator with arrays and objects
+        document.addEventListener("DOMContentLoaded", function () {
+            // Creating two arrays with different elements
+            const array1 = [1, 2, 3];
+            const array2 = [4, 5, 6];
+            
+            // Using the spread operator to combine them into a new array
+            const combinedArray = [...array1, ...array2];
+            console.log("Combined Array:", combinedArray);
+            
+            // Creating two objects with different properties
+            const object1 = { name: "Kaviya", age: 19};
+            const object2 = { city: "Dindigul", country: "India" };
+            
+            // Using the spread operator to combine them into a new object
+            const combinedObject = { ...object1, ...object2 };
+            console.log("Combined Object:", combinedObject);
+            
+            // Using the spread operator to create a copy of an array and modify it without changing the original
+            const copiedArray = [...array1];
+            copiedArray.push(10);
+            console.log("Original Array:", array1);
+            console.log("Modified Copy of Array:", copiedArray);
+        });
+    </script>
+</body>
+</html>

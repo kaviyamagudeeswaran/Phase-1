@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Creation</title>
+</head>
+<body>
+
+    <h2>Open the Console to See Object Operations</h2>
+
+    <script>
+        // Create an object representing a person
+        let person = {
+            name: "Kaviya",
+            age: 19,
+            city: "Dindigul",
+            hobbies: ["Reading", "Sleeping", "Traveling","Coding"]
+        };
+
+        console.log("Original Object:");
+        console.log(person);
+        console.log("----------------------------");
+
+        // Access and print each property using dot notation
+        console.log("Name: " + person.name);
+        console.log("Age: " + person.age);
+        console.log("City: " + person.city);
+        console.log("Hobbies: " + person.hobbies.join(", "));
+        console.log("----------------------------");
+
+        // Add a new property "job"
+        person.job = "Full Stack Developer";
+        console.log("After Adding Job Property:");
+        console.log(person);
+        console.log("----------------------------");
+
+        // Change the value of the "age" property
+        person.age = 19;
+        console.log("After Updating Age:");
+        console.log(person);
+        console.log("----------------------------");
+
+        // Add a method "greet"
+        person.greet = function() {
+            return "Hello, my name is " + this.name + " and I live in " + this.city + "!";
+        };
+
+        // Call the greet method and print the result
+        console.log("Calling Greet Method:");
+        console.log(person.greet());
+    </script>
+
+</body>
+</html>

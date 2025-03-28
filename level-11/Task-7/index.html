@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+
+    <h2>Open the Console to See Array Operations</h2>
+
+    <script>
+        // Create an array with 5 favorite foods
+        let favoriteFoods = ["Briyani", "Tomato Rice", "Dosa", "Burger", "Pasta"];
+
+        console.log("Original Array:");
+        console.log(favoriteFoods);
+        console.log("----------------------------");
+
+        // Add an item to the end
+        favoriteFoods.push("Sushi");
+        console.log("After Adding 'sushi':");
+        console.log(favoriteFoods);
+        console.log("----------------------------");
+
+        // Remove the first item
+        favoriteFoods.shift();
+        console.log("After Removing First Item:");
+        console.log(favoriteFoods);
+        console.log("----------------------------");
+
+        // Find the length of the array
+        console.log("Array Length: " + favoriteFoods.length);
+        console.log("----------------------------");
+
+        // Find index of "Dosa"
+        let index = favoriteFoods.indexOf("Dosa");
+        console.log("Index of 'Dosa': " + index);
+        console.log("----------------------------");
+
+        // Slice the array from index 1 to 3
+        let slicedFoods = favoriteFoods.slice(1, 4);
+        console.log("Sliced Array (Index 1 to 3):");
+        console.log(slicedFoods);
+    </script>
+
+</body>
+</html>
