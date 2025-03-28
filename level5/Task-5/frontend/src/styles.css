@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.app {
+  max-width: 300px;
+  margin: 50px auto;
+  background: rgb(16, 170, 201);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  background: #222;
+  color: rgb(239, 183, 183);
+  font-size: 2rem;
+  padding: 10px;
+  text-align: right;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #ccc;
+}
+
+button:active {
+  background: #bbb;
+}

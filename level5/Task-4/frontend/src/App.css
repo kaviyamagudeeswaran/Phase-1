@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title Styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff5722;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.search-button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color: #e64a19;
+}
+
+/* Recipe Grid Layout */
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Recipe Card Styling */
+.recipe-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-img-container {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to bottom, #ff6f61, #ff8c42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.recipe-title {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item.tall {
+  grid-row: span 2;
+}
+
+.grid-item.wide {
+  grid-column: span 2;
+}
