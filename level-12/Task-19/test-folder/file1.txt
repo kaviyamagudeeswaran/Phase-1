@@ -1,0 +1,2 @@
+echo "Hello, this is file 1." > test-folder/file1.txt
+echo "Another test file." > test-folder/file2.txt

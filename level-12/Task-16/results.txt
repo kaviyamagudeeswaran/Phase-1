@@ -1,0 +1,5 @@
+Column Averages:
+Name: N/A
+Math: 85.00
+Science: 89.00
+English: 87.33
