@@ -1,0 +1,96 @@
+/* Page background */
+body {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient Blue Background */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center the form */
+.form-container {
+  max-width: 800px; /* Increased width */
+  padding: 80px; /* More padding for better spacing */
+  text-align: center;
+  background: #ffffff; /* White form background */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333; /* Default text color */
+}
+
+/* Heading */
+h2 {
+  color: #ff6b6b; /* Vibrant Red Heading */
+  font-size: 28px; /* Slightly larger font */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 18px; /* Increased spacing */
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #007bff; /* Blue labels */
+  font-size: 16px; /* Slightly larger font */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px; /* Slightly larger padding */
+  margin-top: 5px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  background: #ffffff;
+  outline: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px; /* Larger padding */
+  background: #ff6b6b; /* Red button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e63946;
+}
+
+/* Messages */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

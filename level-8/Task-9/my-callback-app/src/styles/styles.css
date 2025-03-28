@@ -1,0 +1,79 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e2f; /* Dark background */
+  color: #ffffff; /* Light text */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #00c8ff; /* Light Blue */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loader {
+  border: 5px solid #2c2c3b;
+  border-top: 5px solid #00c8ff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.data-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #2c2c3b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 200, 255, 0.5);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #00c8ff; /* Light Blue */
+}
+
+.card p {
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

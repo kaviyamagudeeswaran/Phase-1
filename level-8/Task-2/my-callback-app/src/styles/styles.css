@@ -1,0 +1,54 @@
+/* Center the content */
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Style the heading */
+h2 {
+  color: #007bff;
+  font-size: 24px;
+}
+
+/* Style the button */
+.fetch-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.fetch-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the loading and error messages */
+.loading {
+  color: #ff9800;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+}
+
+/* Style the data list */
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.data-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ff5733;
+  font-weight: bold;
+}
