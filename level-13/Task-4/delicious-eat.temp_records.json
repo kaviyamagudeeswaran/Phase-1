@@ -1,0 +1,110 @@
+[{
+  "_id": 1,
+  "title": "Spaghetti Carbonara",
+  "image": "carbonara.jpg",
+  "ingredients": [
+    "spaghetti",
+    "eggs",
+    "bacon",
+    "cheese"
+  ]
+},
+{
+  "_id": 2,
+  "title": "Margherita Pizza",
+  "image": "pizza.jpg",
+  "ingredients": [
+    "flour",
+    "tomato",
+    "cheese",
+    "basil"
+  ]
+},
+{
+  "_id": 3,
+  "title": "Caesar Salad",
+  "image": "salad.jpg",
+  "ingredients": [
+    "lettuce",
+    "croutons",
+    "cheese",
+    "chicken"
+  ]
+},
+{
+  "_id": 4,
+  "title": "Beef Tacos",
+  "image": "tacos.jpg",
+  "ingredients": [
+    "beef",
+    "tortilla",
+    "cheese",
+    "lettuce"
+  ]
+},
+{
+  "_id": 5,
+  "title": "Chicken Curry",
+  "image": "curry.jpg",
+  "ingredients": [
+    "chicken",
+    "curry powder",
+    "coconut milk",
+    "onion"
+  ]
+},
+{
+  "_id": 6,
+  "title": "Pancakes",
+  "image": "pancakes.jpg",
+  "ingredients": [
+    "flour",
+    "milk",
+    "eggs",
+    "sugar"
+  ]
+},
+{
+  "_id": 7,
+  "title": "Garlic Bread",
+  "image": "bread.jpg",
+  "ingredients": [
+    "bread",
+    "garlic",
+    "butter",
+    "parsley"
+  ]
+},
+{
+  "_id": 8,
+  "title": "Vegetable Stir Fry",
+  "image": "stirfry.jpg",
+  "ingredients": [
+    "broccoli",
+    "carrot",
+    "soy sauce",
+    "tofu"
+  ]
+},
+{
+  "_id": 9,
+  "title": "Lemonade",
+  "image": "lemonade.jpg",
+  "ingredients": [
+    "lemon",
+    "sugar",
+    "water",
+    "mint"
+  ]
+},
+{
+  "_id": 10,
+  "title": "Chocolate Cake",
+  "image": "cake.jpg",
+  "ingredients": [
+    "flour",
+    "cocoa",
+    "sugar",
+    "butter"
+  ]
+}]

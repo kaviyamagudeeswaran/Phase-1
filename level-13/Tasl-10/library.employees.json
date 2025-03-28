@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "67e2b358af71888d08fddb6c"
+  },
+  "employee_id": "EMP-7890",
+  "name": "Eve Adams",
+  "department": "IT",
+  "hire_date": {
+    "$date": "2030-01-01T00:00:00.000Z"
+  },
+  "salary": -5000
+}]
