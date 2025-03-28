@@ -1,0 +1,61 @@
+/* Container */
+.data-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.data-container:hover {
+    transform: scale(1.05);
+}
+
+/* Loading Spinner */
+.loading {
+    font-size: 18px;
+    color: #ff4a4a;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Error Message */
+.error {
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Data Display */
+.data-box {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

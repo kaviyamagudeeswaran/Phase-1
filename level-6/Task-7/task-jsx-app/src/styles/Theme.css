@@ -1,0 +1,41 @@
+/* Light Theme */
+.light {
+    background: #f0f0f0;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Theme */
+.dark {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Page */
+.theme-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Button */
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #ff6f61;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 20px;
+}
+
+.toggle-button:hover {
+    background: #ff4a4a;
+    transform: scale(1.1);
+}

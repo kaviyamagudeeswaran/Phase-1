@@ -1,0 +1,63 @@
+/* Toggle Container */
+.toggle-container {
+    text-align: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    padding: 30px;
+    width: 350px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.toggle-container:hover {
+    transform: scale(1.05);
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background: #6a11cb;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    box-shadow: 0px 4px 12px rgba(0, 0, 255, 0.5);
+}
+
+/* Toggle Content */
+.toggle-content {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
