@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #3498db;
+}
+
+.size-text {
+  color: #2ecc71;
+  font-size: 20px;
+  font-weight: bold;
+}

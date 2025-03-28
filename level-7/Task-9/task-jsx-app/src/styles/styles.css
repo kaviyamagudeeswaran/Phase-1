@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the main container */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+h2 {
+  color: #007bff;
+  font-size: 20px;
+}
+
+/* List Styling */
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual Item */
+.item {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+/* Loading Indicator */
+.loading {
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
+  font-size: 16px;
+  animation: fadeIn 1s infinite alternate;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
