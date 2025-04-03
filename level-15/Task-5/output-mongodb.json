@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "67ee8dac9ea7162ac7362661"
+  },
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "1234567890",
+  "address": "123 Street, NY",
+  "group": "General"
+},
+{
+  "_id": {
+    "$oid": "67ee8ded9ea7162ac7362662"
+  },
+  "name": "Kaviya",
+  "email": "kavi@23.com",
+  "phone": "6379858267",
+  "address": "123 Street, palani",
+  "group": "General"
+},
+{
+  "_id": {
+    "$oid": "67ee8dee9ea7162ac7362663"
+  },
+  "name": "Kaviya",
+  "email": "kavi@23.com",
+  "phone": "6379858267",
+  "address": "123 Street, palani",
+  "group": "General"
+},
+{
+  "_id": {
+    "$oid": "67ee8dff9ea7162ac7362664"
+  },
+  "name": "Kani R",
+  "email": "kavi@23.com",
+  "phone": "9876543210",
+  "address": "123 Street, palani",
+  "group": "General"
+},
+{
+  "_id": {
+    "$oid": "67ee91a99926b3c828890ad5"
+  },
+  "name": "bala",
+  "email": " bala@example.com",
+  "phone": "9078456788",
+  "address": "south Street, trichy"
+}]

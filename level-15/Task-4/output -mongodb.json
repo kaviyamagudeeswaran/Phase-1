@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67ed1601cb16db751b3e935c"
+  },
+  "city": "London",
+  "temperature": 15,
+  "description": "Cloudy",
+  "timestamp": {
+    "$date": "2025-04-02T10:48:33.607Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed1627cb16db751b3e935e"
+  },
+  "city": "Dindigul",
+  "temperature": 20,
+  "description": "Cloudy",
+  "timestamp": {
+    "$date": "2025-04-02T10:49:11.383Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed1666cb16db751b3e9360"
+  },
+  "city": "Dindigul",
+  "temperature": 20,
+  "description": "Cloudy",
+  "timestamp": {
+    "$date": "2025-04-02T10:50:14.127Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed1668cb16db751b3e9362"
+  },
+  "city": "Dindigul",
+  "temperature": 20,
+  "description": "Cloudy",
+  "timestamp": {
+    "$date": "2025-04-02T10:50:16.766Z"
+  },
+  "__v": 0
+}]
