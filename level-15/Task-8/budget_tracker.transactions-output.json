@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "67ef3a845b9e1ef377031997"
+  },
+  "type": "income",
+  "amount": 7000,
+  "category": "Salary",
+  "date": {
+    "$date": "2025-05-03T00:00:00.000Z"
+  },
+  "__v": 0
+}]
