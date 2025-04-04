@@ -1,0 +1,3 @@
+[4/4/2025, 9:46:30 am] Backup failed: Unexpected end of JSON input
+[4/4/2025, 9:46:55 am] Backup created: C:\Phase-1\level-15\Task-10\backup\backups\backup-2025-04-04T04-16-55-131Z
+[4/4/2025, 9:46:55 am] Backup compressed: C:\Phase-1\level-15\Task-10\backup\backups\backup-2025-04-04T04-16-55-131Z.zip

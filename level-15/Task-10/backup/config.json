@@ -1,0 +1,8 @@
+{
+  "sourceDir": "./source",
+  "backupDir": "./backups",
+  "maxBackups": 5,
+  "backupIntervalMs": 86400000,
+  "enableCompression": true,
+  "enableIncremental": true
+}
