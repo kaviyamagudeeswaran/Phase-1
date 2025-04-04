@@ -1,0 +1,43 @@
+[{
+  "_id": 201,
+  "userId": 1,
+  "productIds": [
+    101,
+    102
+  ],
+  "orderDate": {
+    "$date": "2024-12-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": 202,
+  "userId": 2,
+  "productIds": [
+    103,
+    104
+  ],
+  "orderDate": {
+    "$date": "2024-12-12T00:00:00.000Z"
+  }
+},
+{
+  "_id": 203,
+  "userId": 1,
+  "productIds": [
+    103
+  ],
+  "orderDate": {
+    "$date": "2024-12-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": 204,
+  "userId": 3,
+  "productIds": [
+    102,
+    104
+  ],
+  "orderDate": {
+    "$date": "2024-12-20T00:00:00.000Z"
+  }
+}]
