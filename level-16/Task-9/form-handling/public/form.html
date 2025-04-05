@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* full screen height */
+      margin: 0;
+      background-color: #f1bdd5;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      background-color: rgb(170, 231, 219);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 250px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/submit" method="POST">
+    <h2>Contact Form</h2>
+
+    <input type="text" name="name" placeholder="Enter Name"><br>
+
+    <input type="email" name="email" placeholder="Enter Email"><br>
+
+    <textarea name="message" placeholder="Enter Message"></textarea><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
