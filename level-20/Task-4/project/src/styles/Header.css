@@ -1,0 +1,76 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--neutral-50);
+}
+
+.logo-icon {
+  color: var(--secondary-300);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.unit-toggle, .theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--neutral-50);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.unit-toggle {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.unit-toggle:hover, .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+  .logo h1 {
+    font-size: 1.25rem;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .unit-toggle, .theme-toggle {
+    height: 36px;
+    width: 36px;
+  }
+}

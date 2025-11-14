@@ -1,0 +1,49 @@
+.historical-weather {
+  color: var(--neutral-50);
+}
+
+.chart-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-control-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--neutral-200);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.chart-control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.chart-control-btn.active {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: var(--neutral-50);
+}
+
+.chart-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (max-width: 640px) {
+  .chart-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .chart-container {
+    padding: 0.5rem;
+  }
+}

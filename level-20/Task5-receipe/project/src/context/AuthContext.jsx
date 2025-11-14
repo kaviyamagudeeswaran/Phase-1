@@ -1,0 +1,108 @@
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import axios from 'axios';
+
+const AuthContext = createContext();
+
+const authReducer = (state, action) => {
+  switch (action.type) {
+    case 'LOGIN_SUCCESS':
+      localStorage.setItem('token', action.payload.token);
+      return {
+        ...state,
+        token: action.payload.token,
+        user: action.payload.user,
+        isAuthenticated: true,
+        loading: false,
+      };
+    case 'LOGIN_FAIL':
+    case 'LOGOUT':
+      localStorage.removeItem('token');
+      return {
+        ...state,
+        token: null,
+        user: null,
+        isAuthenticated: false,
+        loading: false,
+      };
+    case 'SET_LOADING':
+      return {
+        ...state,
+        loading: true,
+      };
+    default:
+      return state;
+  }
+};
+
+export const AuthProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(authReducer, {
+    token: localStorage.getItem('token'),
+    user: null,
+    isAuthenticated: false,
+    loading: false,
+    error: null,
+  });
+
+  useEffect(() => {
+    if (state.token) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${state.token}`;
+    } else {
+      delete axios.defaults.headers.common['Authorization'];
+    }
+  }, [state.token]);
+
+  const login = async (email, password) => {
+    try {
+      dispatch({ type: 'SET_LOADING' });
+      const response = await axios.post('/api/auth/login', { email, password });
+      dispatch({
+        type: 'LOGIN_SUCCESS',
+        payload: response.data,
+      });
+      return { success: true };
+    } catch (error) {
+      dispatch({ type: 'LOGIN_FAIL' });
+      return { success: false, error: error.response?.data?.message || 'Login failed' };
+    }
+  };
+
+  const register = async (name, email, password) => {
+    try {
+      dispatch({ type: 'SET_LOADING' });
+      const response = await axios.post('/api/auth/register', { name, email, password });
+      dispatch({
+        type: 'LOGIN_SUCCESS',
+        payload: response.data,
+      });
+      return { success: true };
+    } catch (error) {
+      dispatch({ type: 'LOGIN_FAIL' });
+      return { success: false, error: error.response?.data?.message || 'Registration failed' };
+    }
+  };
+
+  const logout = () => {
+    dispatch({ type: 'LOGOUT' });
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{
+        ...state,
+        login,
+        register,
+        logout,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
