@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="View developer profiles on DevConnect. Explore skills, bio, and connect with talented developers in our community."/>
+  <title>Developer Profile - DevConnect</title>
+  <link rel="icon" href="/favicon.jpg" type="image/jpeg"/>
+  <link rel="manifest" href="/manifest.json"/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Auth Helper -->
+  <script src="/auth-helper.js"></script>
+  <script src="/auth-check.js"></script>
+</head>
+<body class="bg-gray-50 font-[&#39;Inter&#39;] text-gray-900 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50" data-storm-selectable="true" data-storm-selectable-label="Header" data-storm-selectable-category="header">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Brand Logo -->
+        <div class="flex-shrink-0">
+          <a href="/index.html" class="font-[&#39;Poppins&#39;] font-bold text-2xl text-gray-900 hover:text-blue-600 transition-colors duration-200">
+            DevConnect
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:space-x-8">
+          <a href="/index.html" class="font-[&#39;Inter&#39;] font-medium text-base text-gray-700 hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-gray-50">
+            Feed
+          </a>
+          <a href="/profile.html" class="font-[&#39;Inter&#39;] font-medium text-base text-gray-700 hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-gray-50">
+            My Profile
+          </a>
+        </div>
+
+        <!-- User Avatar (Desktop) -->
+        <div class="hidden md:flex md:items-center">
+          <a href="/profile.html" class="flex items-center">
+            <img src="/images/user-avatar.jpg" alt="User Profile" data-description="Circular user profile avatar image showing the authenticated user&#39;s profile picture" data-img-width="40" data-img-height="40" class="w-10 h-10 rounded-full border-2 border-gray-200 hover:border-blue-600 transition-colors duration-200" id="header-user-avatar"/>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200" aria-label="Toggle menu" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="hidden md:hidden border-t border-gray-200" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="/index.html" class="font-[&#39;Inter&#39;] font-medium text-base text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-lg transition-colors duration-200">
+            Feed
+          </a>
+          <a href="/profile.html" class="font-[&#39;Inter&#39;] font-medium text-base text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-lg transition-colors duration-200">
+            My Profile
+          </a>
+          <div class="pt-4 pb-2 border-t border-gray-200 mt-2">
+            <a href="/profile.html" class="flex items-center px-3 py-2">
+              <img src="/images/user-avatar-mobile.jpg" alt="User Profile" data-description="Circular user profile avatar image for mobile menu showing the authenticated user&#39;s profile picture" data-img-width="32" data-img-height="32" class="w-8 h-8 rounded-full border-2 border-gray-200" id="mobile-user-avatar"/>
+              <span class="ml-3 font-[&#39;Inter&#39;] font-medium text-base text-gray-700">View Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-24 pb-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Loading State -->
+      <div id="loading-state" class="flex justify-center items-center py-20">
+        <div class="animate-pulse flex flex-col items-center space-y-4">
+          <div class="w-32 h-32 bg-gray-300 rounded-full"></div>
+          <div class="h-6 w-48 bg-gray-300 rounded"></div>
+          <div class="h-4 w-64 bg-gray-300 rounded"></div>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div id="error-state" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 text-center" data-storm-selectable="true" data-storm-selectable-label="Error Message" data-storm-selectable-category="section">
+        <svg class="w-12 h-12 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold text-red-900 mb-2">Couldn&#39;t load profile</h3>
+        <p class="text-red-700">Please try again later or check if the profile exists.</p>
+      </div>
+
+      <!-- Profile Content -->
+      <div id="profile-content" class="hidden">
+        
+        <!-- Profile Header Card -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-6" data-storm-selectable="true" data-storm-selectable-label="Profile Header" data-storm-selectable-category="section">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+            
+            <!-- Profile Picture -->
+            <div class="flex-shrink-0" data-storm-selectable="true" data-storm-selectable-label="Profile Picture" data-storm-selectable-category="image">
+              <img id="profile-picture" src="/images/default-avatar.jpg" alt="Developer Profile Picture" data-description="Large circular profile picture of the developer showing their avatar or photo" data-img-width="128" data-img-height="128" class="w-32 h-32 rounded-full border-4 border-gray-200 object-cover"/>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="flex-grow text-center sm:text-left">
+              <h1 id="profile-username" class="text-3xl font-bold text-gray-900 font-[&#39;Poppins&#39;] mb-2" data-storm-selectable="true" data-storm-selectable-label="Username" data-storm-selectable-category="text">
+                Loading...
+              </h1>
+              <p id="profile-bio" class="text-base text-gray-600 leading-relaxed" data-storm-selectable="true" data-storm-selectable-label="Bio" data-storm-selectable-category="text">
+                Loading bio...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8" data-storm-selectable="true" data-storm-selectable-label="Skills Section" data-storm-selectable-category="section">
+          <h2 class="text-2xl font-bold text-gray-900 font-[&#39;Poppins&#39;] mb-4" data-storm-selectable="true" data-storm-selectable-label="Skills Heading" data-storm-selectable-category="text">
+            Skills
+          </h2>
+          
+          <!-- Skills Container -->
+          <div id="skills-container" class="flex flex-wrap gap-2" data-storm-selectable="true" data-storm-selectable-label="Skills List" data-storm-selectable-category="list">
+            <!-- Skills will be dynamically inserted here -->
+          </div>
+
+          <!-- Empty Skills State -->
+          <div id="empty-skills-state" class="hidden text-center py-8">
+            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <p class="text-gray-500 text-base">No skills listed yet</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t border-gray-200 mt-auto" data-storm-selectable="true" data-storm-selectable-label="Footer" data-storm-selectable-category="footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col items-center space-y-6">
+        <!-- Branding Section -->
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-gray-900 font-[&#39;Poppins&#39;]">DevConnect</h3>
+          <p class="text-sm text-gray-600 mt-1">Connecting developers, one post at a time</p>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav class="flex flex-wrap justify-center gap-6">
+          <a href="/index.html" class="text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Feed
+          </a>
+          <a href="/profile.html" class="text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            My Profile
+          </a>
+        </nav>
+        
+        <!-- Divider -->
+        <div class="w-full max-w-md border-t border-gray-200"></div>
+        
+        <!-- Copyright and Community Message -->
+        <div class="text-center space-y-2">
+          <p class="text-xs text-gray-600">
+            Built by developers, for developers
+          </p>
+          <p class="text-xs text-gray-500">
+            © 2025 DevConnect. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import ClientAPI from '/client.js';
+
+    $(document).ready(function() {
+      const client = new ClientAPI();
+      
+      // Mobile menu toggle
+      $('#mobile-menu-button').on('click', function() {
+        $('#mobile-menu').toggleClass('hidden');
+      });
+
+      // Get user_id from query parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const userId = urlParams.get('user_id');
+
+      if (!userId) {
+        showError();
+        return;
+      }
+
+      // Load current user's profile picture for header
+      loadCurrentUserAvatar();
+
+      // Load profile data
+      loadProfile(userId);
+
+      async function loadCurrentUserAvatar() {
+        try {
+          const currentUser = await client.getCurrentAuthUser();
+          if (currentUser && currentUser.userId) {
+            const currentUserProfile = await client.getUserProfile(currentUser.userId);
+            if (currentUserProfile && currentUserProfile.profile_picture_url) {
+              $('#header-user-avatar').attr('src', currentUserProfile.profile_picture_url);
+              $('#mobile-user-avatar').attr('src', currentUserProfile.profile_picture_url);
+            }
+          }
+        } catch (error) {
+          console.error('Error loading current user avatar:', error);
+        }
+      }
+
+      async function loadProfile(userId) {
+        try {
+          const profile = await client.getUserProfile(userId);
+          
+          // Hide loading, show content
+          $('#loading-state').addClass('hidden');
+          $('#profile-content').removeClass('hidden');
+
+          // Populate profile data
+          if (profile.username) {
+            $('#profile-username').text(profile.username);
+          } else {
+            $('#profile-username').text('Anonymous Developer');
+          }
+
+          if (profile.bio) {
+            $('#profile-bio').text(profile.bio);
+          } else {
+            $('#profile-bio').text('No bio available.');
+          }
+
+          if (profile.profile_picture_url) {
+            $('#profile-picture').attr('src', profile.profile_picture_url);
+          }
+
+          // Populate skills
+          if (profile.skills && profile.skills.length > 0) {
+            $('#empty-skills-state').addClass('hidden');
+            $('#skills-container').empty();
+            
+            profile.skills.forEach(skill => {
+              const skillBadge = $(`
+                <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-100 text-purple-800 border border-purple-200 transition-all duration-200 hover:bg-purple-200">
+                  ${escapeHtml(skill)}
+                </span>
+              `);
+              $('#skills-container').append(skillBadge);
+            });
+          } else {
+            $('#skills-container').empty();
+            $('#empty-skills-state').removeClass('hidden');
+          }
+
+        } catch (error) {
+          console.error('Error loading profile:', error);
+          showError();
+        }
+      }
+
+      function showError() {
+        $('#loading-state').addClass('hidden');
+        $('#profile-content').addClass('hidden');
+        $('#error-state').removeClass('hidden');
+      }
+
+      function escapeHtml(text) {
+        const map = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+      }
+    });
+  </script>
+
+
+
+</body></html>
