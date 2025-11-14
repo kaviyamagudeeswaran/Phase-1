@@ -1,0 +1,17 @@
+/* Custom Styles */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px); /* Slight movement up on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+.book-card img {
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+  transform: scale(1.05); /* Zoom effect on image hover */
+}
